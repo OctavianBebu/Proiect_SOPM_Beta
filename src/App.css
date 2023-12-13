@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-image: url('123.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: transparent;
+  color: white;
+}
+
+.App-Tasks{
+  color: #000;
+}
+
+.App-task-calendar-container {
+  display: flex;
+  color: #000;
+}
+
+.App-calendar {
+  margin: 0 auto 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  color: #000;
+}
+
+.App-calendar h2 {
+  margin: 0 auto 10px;
+  color: #000;
+}
+
+/* Styles for the independent task list container */
+.TaskList {
+  width: 230px;
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  padding: 10px; /* Adjust the padding to your liking */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+  background-color: white;
+}
+
+.TaskActivity {
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  padding: 15px; /* Adjust the padding to your liking */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: rgb(0, 0, 0);
+  background-color: white
+}
+
+/* Add the following style to change the color of the text inside the input container */
+.TaskList form label,
+.TaskList form input,
+.TaskList form button {
+  color: rgb(255, 0, 0); /* Set text color to black (or your preferred color) */
+}
+
+.TaskList h2 {
+  margin-bottom: 5px; /* Adjust the margin to reduce space between h2 and p elements */
+}
+
+.TaskList p {
+  margin: 5px 0; /* Adjust the margin to reduce space around the paragraph */
+}
+
+.TaskList ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove margin from the ul element */
+}
+
+.TaskList li {
+  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.TaskList li strong {
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.TaskList li p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.TaskList li span {
+  font-size: 12px;
+  color: #000000;
+}
+
+.TitleAndDelete {
+  display: flex;
+  align-items: center;
+  gap: 125px;
+}
+
+.DeleteButton {
+  font-size: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  background-color: red;
+}
+
+.ToggleExpandButton {
+  font-size: 8px;
+  padding: 4px;
+  cursor: pointer;
+  height: 5px;
+}
+
+.DetailsButton {
+  font-size: 8px;
+  padding: 0px 16px;
+  cursor: pointer;
+  background-color: red;
+}
+
+.AddTaskButton {
+  background-color: lightgrey;
+  color:#000;
+}
+
+.Tags {
+  display: flex;
+  gap: 58px;
+  font-size: 12px;
+}
+
+.Tags span:nth-child(1) {
+  padding: 2px 5px;
+}
+
+.Tags span:nth-child(2) {
+  background-color: rgb(98, 98, 255); /* Set the background color for the second span */
+  padding: 2px 5px;
+}
+
+.Tags span:nth-child(3) {
+  background-color: rgb(255, 117, 255); /* Set the background color for the third span */
+}
+
+.Tags .upcoming-class {
+  background-color: rgb(124, 247, 124); /* Set background color for Upcoming status */
+}
+
+.Tags .overdue-class {
+  background-color: #c41d00; /* Set background color for Overdue status */
+}
+
+.Tags .canceled-class {
+  background-color: rgb(231, 80, 105); /* Set background color for Canceled status */
+}
+
+.Tags .done-class {
+  background-color: #124e12; /* Set background color for Done status */
+}
+
+.TaskList-content {
+  max-height: 227px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: rgb(100, 81, 81);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.TaskList-scrollable {
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: rgb(100, 81, 81);
+}
+
+.TaskDetails {
+  width: 170px; /* Adjust the maximum width as per your design */
+}
+
+/* Add Task Modal Styles */
+.modal {
+  position: fixed; /* or use 'absolute' based on your design preference */
+  top: 50%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  color:#000;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's above other elements */
+  max-width: 400px;
+  width: 80%; /* Adjust the width as needed */
+  overflow: hidden; /* Ensure the content does not overflow */
+}
+
+.modal-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.modal label,
+.modal textarea,
+.modal select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Adjust the width for the Task Title text box */
+.modal #taskNameModal {
+  width: 100%; /* You can adjust as needed */
+  margin-bottom: 10px;
+}
+
+/* Adjust the width for the Priority dropdown */
+.modal #taskPriorityModal {
+  width: 100%; /* You can adjust as needed */
+  margin-bottom: 10px;
+}
+
+/* Adjust the width for the Task Description text area */
+.modal #taskDescriptionModal {
+  width: 97%; /* You can adjust as needed */
+  margin-bottom: 10px;
+}
+
+.modal button {
+  margin-right: 5px;
+  align-items: center;
+}
+
